@@ -248,9 +248,12 @@ export default function AuctionDetailsPage() {
 
                     {/* Details Button */}
                     <td className="py-4 px-6 whitespace-nowrap text-center">
-                      <button className="bg-brand-gold hover:bg-yellow-500 text-white font-bold text-xs py-2 px-5 rounded-md transition-colors w-full cursor-pointer">
+                      <Link 
+                        href={`/property-details?image=${encodeURIComponent(row.image)}&title=${encodeURIComponent("عمارة جديدة " + (row.id + 1))}&price=500,000,000&type=${auctionType}`}
+                        className="bg-brand-gold hover:bg-yellow-500 text-white font-bold text-xs py-2 px-5 rounded-md transition-colors w-full cursor-pointer text-center block"
+                      >
                         تفاصيل المزاد
-                      </button>
+                      </Link>
                     </td>
 
                   </tr>
@@ -339,9 +342,12 @@ export default function AuctionDetailsPage() {
                     <span className="text-brand-orange font-bold text-xs mr-4">{auctionType === "upcoming" ? "0" : "71"} مزايد</span>
                   </div>
                   
-                  <button className="bg-brand-gold hover:bg-yellow-500 text-white font-bold text-[11px] py-2.5 px-6 rounded-md transition-colors shrink-0 cursor-pointer">
+                  <Link 
+                    href={`/property-details?image=${encodeURIComponent(row.image)}&title=${encodeURIComponent("قطعة ارض رقم " + (row.id + 1))}&price=500,000,000&type=${auctionType}`}
+                    className="bg-brand-gold hover:bg-yellow-500 text-white font-bold text-[11px] py-2.5 px-6 rounded-md transition-colors shrink-0 cursor-pointer text-center"
+                  >
                     تفاصيل المزاد
-                  </button>
+                  </Link>
                 </div>
 
               </div>
@@ -423,9 +429,12 @@ export default function AuctionDetailsPage() {
                     </div>
                     <span className="text-brand-orange font-bold text-xs mr-4">{auctionType === "upcoming" ? "0" : "71"} مزايد</span>
                   </div>
-                  <button className="bg-brand-gold hover:bg-yellow-500 text-white font-bold text-[11px] py-2.5 px-6 rounded-md transition-colors shrink-0">
+                  <Link 
+                    href={`/property-details?image=${encodeURIComponent(rows[0].image)}&title=${encodeURIComponent("قطعة ارض رقم 1")}&price=500,000,000&type=${auctionType}`}
+                    className="bg-brand-gold hover:bg-yellow-500 text-white font-bold text-[11px] py-2.5 px-6 rounded-md transition-colors shrink-0 text-center"
+                  >
                     تفاصيل المزاد
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -10,9 +10,8 @@ export default function Navbar() {
     <nav className="bg-[#171D5B] text-white py-4 px-6 font-cairo shadow-xl border-b border-white/5" dir="rtl">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
         
-        {/* Right Section: Logo and Links */}
-        <div className="flex items-center gap-12">
-          {/* Logo (Reverted to Previous Version) */}
+        {/* Right Section: Logo only */}
+        <div className="flex items-center">
           <Link href="/" className="flex flex-col items-center text-center select-none cursor-pointer gap-2">
             <div className="relative flex items-end">
               <span className="text-3xl font-black tracking-tight leading-[0.8] mb-1 text-white">سومتك</span>
@@ -26,27 +25,24 @@ export default function Navbar() {
               </div>
             </div>
           </Link>
+        </div>
 
-          {/* Nav Links */}
-          <div className="hidden lg:flex items-center gap-8 text-[19px]">
-            <Link href="/" className="relative py-1 group">
-              <span className={`font-bold transition-colors duration-300 ${pathname === "/" ? "text-brand-gold" : "text-white group-hover:text-brand-gold"}`}>الرئيسية</span>
-              <span className={`absolute -bottom-1 right-0 h-1 bg-brand-gold rounded-full transition-all duration-300 w-0 ${pathname === "/" ? "w-full" : "w-1/2  group-hover:w-full"}`}></span>
-            </Link>
+        {/* Center Section: Nav Links (Absolutely Centered) */}
+        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-10 text-[19px]">
+          <Link href="/" className="relative py-1 group">
+            <span className={`font-bold transition-colors duration-300 ${pathname === "/" ? "text-brand-gold" : "text-white group-hover:text-brand-gold"}`}>الرئيسية</span>
+            <span className={`absolute -bottom-1 right-0 h-1 bg-brand-gold rounded-full transition-all duration-300 w-0 ${pathname === "/" ? "w-full" : "w-1/2  group-hover:w-full"}`}></span>
+          </Link>
 
-            <Link href="/auctions" className="relative py-1 group">
-              <span className={`font-medium transition-colors duration-300 ${pathname === "/auctions" ? "text-brand-gold" : "text-white/90 group-hover:text-brand-gold"}`}>المزادات</span>
-              <span className={`absolute -bottom-1 right-0 h-1 bg-brand-gold rounded-full transition-all duration-300 ${pathname === "/auctions" ? "w-full" : "w-1/2 group-hover:w-full"}`}></span>
-            </Link>
+          <Link href="/auctions" className="relative py-1 group">
+            <span className={`font-medium transition-colors duration-300 ${pathname === "/auctions" ? "text-brand-gold" : "text-white/90 group-hover:text-brand-gold"}`}>المزادات</span>
+            <span className={`absolute -bottom-1 right-0 h-1 bg-brand-gold rounded-full transition-all duration-300 ${pathname === "/auctions" ? "w-full" : "w-1/2 group-hover:w-full"}`}></span>
+          </Link>
 
-            <Link href="/contact" className="font-medium text-white/90 hover:text-brand-gold transition-colors">
-              تواصل معنا
-            </Link>
-
-            <Link href="/faq" className="font-medium text-white/90 hover:text-brand-gold transition-colors">
-              الأسئلة الشائعة
-            </Link>
-          </div>
+          <Link href="/contact" className="relative py-1 group">
+            <span className={`font-medium transition-colors duration-300 ${pathname === "/contact" ? "text-brand-gold" : "text-white/90 group-hover:text-brand-gold"}`}>تواصل معنا</span>
+            <span className={`absolute -bottom-1 right-0 h-1 bg-brand-gold rounded-full transition-all duration-300 ${pathname === "/contact" ? "w-full" : "w-1/2 group-hover:w-full"}`}></span>
+          </Link>
         </div>
 
         {/* Left Section: Action Button and Login */}
@@ -57,11 +53,10 @@ export default function Navbar() {
             <span>اضف عقارك</span>
           </button>
 
-          {/* Login Section */}
-          <div className="flex items-center gap-2.5 cursor-pointer group hover:text-brand-gold transition-all duration-300">
+          <Link href="/login" className="flex items-center gap-2.5 cursor-pointer group hover:text-brand-gold transition-all duration-300">
             <span className="text-lg font-medium">تسجيل الدخول</span>
             <UserCircle size={32} strokeWidth={1.5} className="text-white group-hover:text-brand-gold transition-all duration-300" />
-          </div>
+          </Link>
         </div>
 
       </div>

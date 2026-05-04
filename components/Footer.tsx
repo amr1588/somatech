@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
           <ul className="space-y-4 text-gray-400 font-medium text-[13px]">
             <li><Link href="#" className="hover:text-[#171D5B] transition-colors">الضوابط الإعلانية الصادرة من الهيئة</Link></li>
-            <li><Link href="#" className="hover:text-[#171D5B] transition-colors">الشروط والأحكام</Link></li>
+            <li><Link href="/terms" className="hover:text-[#171D5B] transition-colors">الشروط والأحكام</Link></li>
             <li><Link href="#" className="hover:text-[#171D5B] transition-colors">ترخيص الهيئة العامة للعقار</Link></li>
             <li><Link href="#" className="hover:text-[#171D5B] transition-colors">تواصل معنا</Link></li>
           </ul>
