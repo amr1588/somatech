@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function VerifyOtpPage() {
+function VerifyOtpContent() {
   const searchParams = useSearchParams();
   const identifier = searchParams.get("identifier") || "+966 50 *** **44";
   const [otp, setOtp] = useState(["", "", "", ""]);
@@ -140,5 +140,20 @@ export default function VerifyOtpPage() {
       <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-brand-blue/20 rounded-full blur-[100px] pointer-events-none"></div>
     </div>
+  );
+}
+
+export default function VerifyOtpPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 font-cairo" dir="rtl">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-brand-orange border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-brand-blue font-bold">جاري التحميل...</span>
+        </div>
+      </div>
+    }>
+      <VerifyOtpContent />
+    </Suspense>
   );
 }

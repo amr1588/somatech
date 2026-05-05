@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Grid, List, Map, Download, FileSpreadsheet, Plus, Phone, Building2, FileText } from "lucide-react";
 
-export default function AuctionDetailsPage() {
+function AuctionDetailsContent() {
   const searchParams = useSearchParams();
   const imageUrl = searchParams.get("image") || "/jenan-taiba.jpg";
   const [totalSeconds, setTotalSeconds] = useState(6 * 86400 + 14 * 3600 + 12 * 60 + 40);
@@ -509,5 +509,20 @@ export default function AuctionDetailsPage() {
 }
       
     </div>
+  );
+}
+
+export default function AuctionDetailsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 font-cairo" dir="rtl">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-brand-orange border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-brand-blue font-bold">جاري تحميل تفاصيل المزاد...</span>
+        </div>
+      </div>
+    }>
+      <AuctionDetailsContent />
+    </Suspense>
   );
 }

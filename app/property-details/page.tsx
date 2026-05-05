@@ -20,9 +20,9 @@ import {
   FileSpreadsheet,
   Gavel
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
-export default function PropertyDetailsPage() {
+function PropertyDetailsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -505,5 +505,20 @@ export default function PropertyDetailsPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function PropertyDetailsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 font-cairo" dir="rtl">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-brand-orange border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-brand-blue font-bold">جاري تحميل تفاصيل العقار...</span>
+        </div>
+      </div>
+    }>
+      <PropertyDetailsContent />
+    </Suspense>
   );
 }
