@@ -39,7 +39,7 @@ export default function ResetPasswordPage() {
         <div className="mb-8 flex flex-col items-center">
             <div className="relative flex items-end">
               <span className="text-5xl font-black tracking-tight leading-[0.8] mb-1 text-white">سومتك</span>
-              <span className="absolute top-1 right-[17.5px] w-3.5 h-3.5 bg-brand-gold rounded-sm rotate-45 border-2 border-[#171D5B]"></span>
+              <span className="absolute top-1 right-[70px] w-3.5 h-3.5 bg-brand-gold rounded-sm rotate-45 border-2 border-[#171D5B]"></span>
             </div>
             <div className="flex flex-col items-center gap-1 mt-3">
               <span className="text-brand-gold font-bold text-2xl tracking-[0.3em] leading-none mb-1">SOUMTECH</span>
@@ -113,7 +113,7 @@ export default function ResetPasswordPage() {
         </div>
 
         {/* Partner Logos */}
-        <div className="mt-16 flex items-center gap-16 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+        <div className="mt-16 flex items-center gap-16 transition-all duration-500">
            <Image src="/elhy2aEl3ama.png" alt="REGA" width={180} height={90} className="object-contain" />
            <Image src="/mazaya_Alfedhiyah.png" alt="Infath" width={180} height={90} className="object-contain" />
         </div>
