@@ -87,10 +87,10 @@ function PropertyDetailsContent() {
       <div className="max-w-[1400px] mx-auto px-6 mt-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
-          {/* LEFT COLUMN: Sidebar (4 cols) */}
+          {/* Sidebar */}
           <div className="lg:col-span-6 flex flex-col gap-6">
             
-            {/* Conditional Left Sidebar Top Section */}
+            {/* Conditional Sidebar Top Section */}
             {(auctionType === "active" || auctionType === "expired") && (
               <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 mb-6">
                 <div className="flex justify-between items-center mb-6">
@@ -201,7 +201,7 @@ function PropertyDetailsContent() {
 
           </div>
 
-          {/* RIGHT COLUMN: Main Content (7 cols) */}
+          {/* Main Content */}
           <div className="lg:col-span-6 flex flex-col gap-6">
             
             {/* Header Title & Badge */}
@@ -260,14 +260,14 @@ function PropertyDetailsContent() {
                </div>
             </div>
 
-            {/* Expired Auction Badge (New Section) */}
+            {/* Expired Auction Badge */}
             {auctionType === "expired" && (
                 <div className="bg-brand-orange text-white w-full py-4 rounded-[16px] text-center font-black text-xl shadow-lg mt-4">
                   مزاد منتهي
                 </div>
             )}
 
-             {/* Upcoming Auction Details Strip (New Section) */}
+             {/* Upcoming Auction Details Strip */}
              {auctionType === "upcoming" && (
                 <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 flex items-center justify-between mt-4" dir="rtl">
                    <div className="flex flex-col items-center flex-1">
@@ -282,7 +282,7 @@ function PropertyDetailsContent() {
                 </div>
              )}
 
-            {/* Timer Strip - Only for Active & Upcoming */}
+            {/* Timer Strip  Only for Active & Upcoming */}
             {(auctionType === "active" || auctionType === "upcoming") && (
               <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 flex justify-center gap-8 md:gap-16 items-center" dir="rtl">
                  <div className="flex flex-col items-center gap-1">
@@ -307,10 +307,10 @@ function PropertyDetailsContent() {
               </div>
             )}
 
-            {/* Price Info Grid (Second Image) - Only for Active & Expired */}
+            {/* Price Info Grid for Active & Expired */}
             {(auctionType === "active" || auctionType === "expired") && (
                <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mt-4">
-                  {/* Left: Detailed Breakdown */}
+                  {/* Detailed Breakdown */}
                   <div className="flex flex-col gap-2 w-full md:w-1/2">
                      <div className="flex justify-between text-sm font-bold">
                         <span className="text-brand-blue">200 ريال</span>
@@ -330,7 +330,7 @@ function PropertyDetailsContent() {
                      </div>
                   </div>
 
-                  {/* Right: Current Bid Title & Price */}
+                  {/* Current Bid Title & Price */}
                   <div className="flex flex-col items-end gap-2 w-full md:w-1/2">
                      <h2 className="text-xl font-black text-brand-blue">سعر السوم الحالي</h2>
                      <div className="flex items-baseline gap-2">
@@ -341,7 +341,7 @@ function PropertyDetailsContent() {
                </div>
             )}
 
-            {/* Stats & Action Section (Last Image) */}
+            {/* Stats & Action Section */}
             <div className="bg-white rounded-[24px] p-6 shadow-sm border border-gray-100 flex flex-col gap-6 mt-4" dir="rtl">
                {/* Stats Row */}
                <div className="flex items-center justify-between">

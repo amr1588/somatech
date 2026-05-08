@@ -79,7 +79,7 @@ function AuctionDetailsContent() {
       <div className="w-full bg-[#F3F4F6] py-8 mb-6 border-b border-gray-200">
         <div className="w-full max-w-[1400px] mx-auto px-4 flex justify-between items-center">
           
-          {/* Left: Logos */}
+          {/* Logos */}
           <div className="flex items-center gap-6">
             <div className="bg-[#1D2153] p-2 rounded-lg flex items-center justify-center w-[140px] h-[70px]">
               <Image src={imageUrl} alt="Auction Image" width={120} height={60} className="object-contain mix-blend-screen" />
@@ -90,7 +90,7 @@ function AuctionDetailsContent() {
             </div>
           </div>
 
-          {/* Right: Title & Asset Count */}
+          {/* Title & Asset Count */}
           <div className="flex flex-col items-end gap-2">
             <h1 className="text-3xl font-extrabold text-brand-blue">مزاد نفائس حريملاء</h1>
             <div className="flex flex-col items-end gap-1">
@@ -142,7 +142,7 @@ function AuctionDetailsContent() {
           </button>
         </div>
 
-        {/* Right: View Toggle */}
+        {/* View Toggle */}
         <div className="flex bg-[#F1F3F5] rounded-lg p-1 border border-gray-200">
           <button 
             onClick={() => setViewMode("map")}
@@ -266,11 +266,11 @@ function AuctionDetailsContent() {
         <div className="w-full max-w-[1400px] px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {rows.map((row) => (
             <div key={row.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 flex gap-4 hover:shadow-md transition-shadow">
-              {/* Image Side (Right) */}
+              {/* Image Side */}
               <div className="relative w-[140px] h-[160px] rounded-xl overflow-hidden shrink-0">
                 <Image src={row.image} alt="Property" layout="fill" objectFit="cover" />
                 
-                {/* Top left badge */}
+                {/* Top badge */}
                 <div className="absolute top-2 left-2 bg-white/90 p-1 rounded-md shadow-sm">
                   <Image src="/mazaya_Alfedhiyah.png" alt="Logo" width={24} height={12} className="object-contain" />
                 </div>
@@ -282,7 +282,7 @@ function AuctionDetailsContent() {
                 </div>
               </div>
 
-              {/* Content Side (Left) */}
+              {/* Content Side */}
               <div className="flex flex-col justify-between w-full py-1">
                 
                 {/* Header Row */}
@@ -304,7 +304,7 @@ function AuctionDetailsContent() {
                   </div>
                 </div>
 
-                {/* Dynamic Middle Section */}
+                {/* Middle Section */}
                 {auctionType === "expired" ? (
                   <div className="bg-[#DF5430] text-white font-bold text-[11px] py-2 px-4 rounded-full text-center w-full my-2 shadow-sm">
                     مزاد منتهي
@@ -332,7 +332,7 @@ function AuctionDetailsContent() {
                   </div>
                 )}
 
-                {/* Dynamic Bottom Row */}
+                {/* Bottom Row */}
                 <div className="flex justify-between items-end mt-auto pt-2 border-t border-gray-50">
                   <div className="flex flex-col items-start gap-0.5">
                     <div className="flex items-center gap-1 text-[10px] font-bold text-brand-blue">
@@ -357,12 +357,12 @@ function AuctionDetailsContent() {
       ) : (
         <div className="w-full max-w-[1400px] px-4 flex flex-col lg:flex-row gap-6">
           
-          {/* Left Sidebar: Details */}
+          {/* Sidebar: Details */}
           <div className="w-full lg:w-[380px] shrink-0 flex flex-col gap-4">
             
             {/* Property Card (Same as Grid View but single) */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 flex gap-4">
-              {/* Image Side (Right) */}
+              {/* Image Side */}
               <div className="relative w-[130px] h-[150px] rounded-xl overflow-hidden shrink-0">
                 <Image src={rows[0].image} alt="Property" layout="fill" objectFit="cover" />
                 <div className="absolute top-2 left-2 bg-white/90 p-1 rounded-md shadow-sm">
@@ -476,7 +476,7 @@ function AuctionDetailsContent() {
 
           </div>
 
-          {/* Right Main Section: Map Image */}
+          {/* Main Section: Map Image */}
           <div className="flex-1 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative min-h-[600px]">
             <Image src="/mapAdjust.png" alt="Map View" layout="fill" objectFit="cover" className="hover:scale-105 transition-transform duration-700" />
           </div>

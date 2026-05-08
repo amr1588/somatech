@@ -32,14 +32,14 @@ export default function AssetDetailModal({ isOpen, onClose, assetTitle = "فيل
 
         <div className="flex-1 overflow-auto p-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent" dir="ltr">
           <div dir="rtl">
-          {/* Header Row: Price (Left) and Title (Right) */}
+          {/* Header Row: Price and Title  */}
           <div className="flex justify-between items-start mb-8">
-             {/* Title & Location (Right) */}
+             {/* Title & Location  */}
              <div className="text-right">
               <h2 className="text-[28px] font-black text-[#1D2939] leading-tight">{assetTitle}</h2>
               <p className="text-[#667085] text-[16px] font-medium mt-1">الدمام - عتيقة</p>
             </div>
-            {/* Price (Left) */}
+            {/* Price */}
             <div className="text-left" dir="ltr">
               <div className="text-[22px] font-black text-[#1D2939] mb-1">سعر السوم الحالي</div>
               <div className="text-[25px] font-black text-brand-gold flex items-baseline justify-end gap-2">
@@ -49,9 +49,9 @@ export default function AssetDetailModal({ isOpen, onClose, assetTitle = "فيل
             </div>
           </div>
 
-          {/* Middle Row: Gallery (Right) and Buttons (Left) */}
+          {/* Middle Row: Gallery and Buttons  */}
           <div className="flex gap-10 mb-10 items-start" dir="rtl">
-            {/* Gallery (Right) */}
+            {/* Gallery  */}
             <div className="flex-1 relative aspect-[16/10] rounded-2xl overflow-hidden shadow-sm border border-gray-100">
               <Image 
                 src={assetImage} 
@@ -68,7 +68,7 @@ export default function AssetDetailModal({ isOpen, onClose, assetTitle = "فيل
                 <ChevronRight size={20} />
               </button>
               
-              {/* Pagination Dots */}
+              {/* Pagination */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
                 {[1, 2, 3, 4, 5, 6, 7].map((i) => (
                   <div key={i} className={`w-2 h-2 rounded-full transition-all duration-300 ${i === 5 ? 'bg-orange-500' : 'bg-white/70'}`} />
@@ -81,7 +81,7 @@ export default function AssetDetailModal({ isOpen, onClose, assetTitle = "فيل
               </div>
             </div>
 
-            {/* Action Buttons (Left) */}
+            {/* Action Buttons  */}
             <div className="w-[450px] flex gap-4 pt-1">
               <button 
                 onClick={() => onReject?.()}
@@ -147,7 +147,7 @@ export default function AssetDetailModal({ isOpen, onClose, assetTitle = "فيل
 
             {/* Bottom Footer Section */}
             <div className="flex justify-between items-end mt-12 pt-4" dir="ltr">
-              {/* PDF/XLS Icons (Left) */}
+              {/* PDF/XLS Icons  */}
               <div className="flex gap-4">
                 <button className="w-11 h-11 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center hover:bg-rose-50 transition-all overflow-hidden">
                   <Image src="/pdf-icon.png" alt="PDF" width={45} height={45} className="object-contain" />
@@ -157,7 +157,7 @@ export default function AssetDetailModal({ isOpen, onClose, assetTitle = "فيل
                 </button>
               </div>
               
-              {/* اعلي المزايدين (Right) */}
+              {/* اعلي المزايدين */}
               <div className="text-right">
                 <h4 className="text-[20px] font-black text-gray-800">
                   اعلي المزايدين <span className="text-orange-500 font-black mr-1">(3)</span>

@@ -31,7 +31,7 @@ export default function ContactPage() {
           {/* Form Content Container */}
           <div className="relative z-10 flex flex-col items-center justify-center h-full py-16 px-6">
             
-            {/* Logo in the center top of the card */}
+            {/* Logo */}
             <div className="mb-12 flex flex-col items-center">
                <h2 className="text-white text-5xl font-black tracking-wider mb-2">سومتك</h2>
                <div className="text-brand-gold text-lg font-bold tracking-[0.3em] uppercase">SOUMTECH</div>

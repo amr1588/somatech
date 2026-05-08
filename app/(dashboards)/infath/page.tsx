@@ -33,7 +33,7 @@ export default function InfathDashboard() {
     <div className="flex flex-col gap-2 p-4 h-full overflow-hidden" dir="rtl">
       {/* Hero Banner Section */}
       <div className="relative rounded-3xl overflow-hidden bg-[#0A1629] h-28 flex items-center px-10 text-white shrink-0">
-        {/* Background Patterns (Wavy lines) */}
+        {/* Background Patterns */}
         <div className="absolute inset-0 opacity-15 pointer-events-none overflow-hidden">
           <svg viewBox="0 0 1000 300" preserveAspectRatio="none" className="w-full h-full">
             <path d="M0,100 Q250,50 500,100 T1000,100" fill="none" stroke="white" strokeWidth="1" />

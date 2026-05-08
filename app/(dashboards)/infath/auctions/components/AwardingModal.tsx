@@ -59,14 +59,14 @@ export default function AwardingModal({
 
         <div className="flex-1 overflow-auto p-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent" dir="ltr">
           <div dir="rtl">
-            {/* Header Row: Price (Left) and Title (Right) */}
+            {/* Header Row: Price and Title */}
             <div className="flex justify-between items-start mb-8">
-               {/* Title & Location (Right) */}
+               {/* Title & Location  */}
                <div className="text-right">
                 <h2 className="text-[28px] font-black text-[#1D2939] leading-tight">{assetTitle}</h2>
                 <p className="text-[#667085] text-[16px] font-medium mt-1">الدمام - عتيقة</p>
               </div>
-              {/* Price (Left) */}
+              {/* Price */}
               <div className="text-left" dir="ltr">
                 <div className="text-[22px] font-black text-[#1D2939] mb-1">سعر السوم الحالي</div>
                 <div className="text-[25px] font-black text-brand-gold flex items-baseline justify-end gap-2">
@@ -76,9 +76,9 @@ export default function AwardingModal({
               </div>
             </div>
 
-            {/* Middle Row: Gallery (Right) and Awarding Controls (Left) */}
+            {/* Middle Row: Gallery and Awarding Controls */}
             <div className="flex gap-10 mb-10 items-start" dir="rtl">
-              {/* Gallery (Right) */}
+              {/* Gallery */}
               <div className="flex-1 relative aspect-[16/11] rounded-2xl overflow-hidden shadow-sm border border-gray-100">
                 <Image 
                   src={assetImage} 

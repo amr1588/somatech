@@ -27,7 +27,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Center Section: Nav Links (Absolutely Centered) */}
+        {/* Center Section: Nav Links */}
         <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-10 text-[19px]">
           <Link href="/" className="relative py-1 group">
             <span className={`font-bold transition-colors duration-300 ${pathname === "/" ? "text-brand-gold" : "text-white group-hover:text-brand-gold"}`}>الرئيسية</span>
